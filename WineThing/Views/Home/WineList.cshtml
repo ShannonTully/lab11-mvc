@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WineThing.Models.Wines>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Wine List</title>
+    <link rel="stylesheet" href="~/style/StyleSheet.css" />
+</head>
+<body>
+    Wine List
+    <a asp-controller="Home" asp-action="Index">New search</a>
+
+    @foreach (var item in Model)
+    {
+        <p class="shake">$@item.Price, @item.Points points, @item.Description</p>
+    }
+
+
+</body>
+</html>
